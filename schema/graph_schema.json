@@ -1,0 +1,227 @@
+{
+    "classes": {
+        "Person": {
+            "description": "People"
+        },
+        "Location": {
+            "description": "Locations"
+        },
+        "Phone": {
+            "description": "Phone"
+        },
+        "Email": {
+            "description": "Email"
+        },
+        "Officer": {
+            "description": "Officers"
+        },
+        "PostCode": {
+            "description": "PostCode"
+        },
+        "Area": {
+            "description": "Areas"
+        },
+        "PhoneCall": {
+            "description": "Phone calls"
+        },
+        "Crime": {
+            "description": "Crimes"
+        },
+        "Object": {
+            "description": "Criminal Objects"
+        },
+        "Vehicle": {
+            "description": "Vehicles"
+        }
+    },
+    "properties": {
+        "year": {
+            "description": "year",
+            "type": "INTEGER"
+        },
+        "postcode": {
+            "description": "post code",
+            "type": "STRING"
+        },
+        "call_time": {
+            "description": "time",
+            "type": "TIME"
+        },
+        "nhs_no": {
+            "description": "national health service number",
+            "type": "STRING"
+        },
+        "address": {
+            "description": "address",
+            "type": "STRING"
+        },
+        "name": {
+            "description": "name",
+            "type": "STRING"
+        },
+        "phoneNo": {
+            "description": "phone number",
+            "type": "STRING"
+        },
+        "model": {
+            "description": "model",
+            "type": "STRING"
+        },
+        "badge_no": {
+            "description": "badge number",
+            "type": "STRING"
+        },
+        "areaCode": {
+            "description": "area code",
+            "type": "STRING"
+        },
+        "rank": {
+            "description": "rank",
+            "type": "STRING"
+        },
+        "type": {
+            "description": "type",
+            "type": "STRING"
+        },
+        "call_date": {
+            "description": "call date",
+            "type": "DATE"
+        },
+        "call_duration": {
+            "description": "call duration (seconds)",
+            "type": "INTEGER"
+        },
+        "email_address": {
+            "description": "email address",
+            "type": "STRING"
+        },
+        "make": {
+            "description": "car brand",
+            "type": "STRING"
+        },
+        "date": {
+            "description": "date",
+            "type": "DATE"
+        },
+        "surname": {
+            "description": "last name",
+            "type": "STRING"
+        },
+        "code": {
+            "description": "code",
+            "type": "STRING"
+        },
+        "last_outcome": {
+            "description": "processing status",
+            "type": "STRING"
+        },
+        "age": {
+            "description": "age",
+            "type": "INTEGER"
+        }
+    },
+    "relations": {
+        "CURRENT_ADDRESS": {
+            "description": "that lives in",
+            "domain": "Person",
+            "range": "Location",
+            "reverse_description": "that is the residence of"
+        },
+        "HAS_PHONE": {
+            "description": "which has",
+            "domain": "Person",
+            "range": "Phone",
+            "reverse_description": "that belongs to"
+        },
+        "HAS_EMAIL": {
+            "description": "which has",
+            "domain": "Person",
+            "range": "Email",
+            "reverse_description": "that belongs to"
+        },
+        "KNOWS_SN": {
+            "description": "that is friends with",
+            "domain": "Person",
+            "range": "Person",
+            "reverse_description": "who is friends of"
+        },
+        "KNOWS": {
+            "description": "who knows",
+            "domain": "Person",
+            "range": "Person",
+            "reverse_description": "who is known by"
+        },
+        "HAS_POSTCODE": {
+            "description": "which has",
+            "domain": "Location",
+            "range": "PostCode",
+            "reverse_description": "that is associated with"
+        },
+        "POSTCODE_IN_AREA": {
+            "description": "that is in",
+            "domain": "PostCode",
+            "range": "Area",
+            "reverse_description": "that has"
+        },
+        "INVOLVED_IN": {
+            "description": "that is involved in",
+            "domain": "Vehicle",
+            "range": "Crime",
+            "reverse_description": "which involved the"
+        },
+        "CALLER": {
+            "description": "that were made to",
+            "domain": "PhoneCall",
+            "range": "Phone",
+            "reverse_description": "that made a"
+        },
+        "CALLED": {
+            "description": "that were received a",
+            "domain": "PhoneCall",
+            "range": "Phone",
+            "reverse_description": "that received a"
+        },
+        "KNOWS_PHONE": {
+            "description": "knows the phone of",
+            "domain": "Person",
+            "range": "Person",
+            "reverse_description": "whose phone number is known by"
+        },
+        "OCCURRED_AT": {
+            "description": "that occurred at",
+            "domain": "Crime",
+            "range": "Location",
+            "reverse_description": "that are the locations of"
+        },
+        "INVESTIGATED_BY": {
+            "description": "that is investigated by",
+            "domain": "Crime",
+            "range": "Officer",
+            "reverse_description": "that investigates the"
+        },
+        "PARTY_TO": {
+            "description": "which is involved in",
+            "domain": "Person",
+            "range": "Crime",
+            "reverse_description": "that involves"
+        },
+        "FAMILY_REL": {
+            "description": "that has a family relation with",
+            "domain": "Person",
+            "range": "Person",
+            "reverse_description": "that is in a family relation with"
+        },
+        "KNOWS_LW": {
+            "description": "that lives with",
+            "domain": "Person",
+            "range": "Person",
+            "reverse_description": "who lives with"
+        },
+        "LOCATION_IN_AREA": {
+            "description": "that is included",
+            "domain": "Location",
+            "range": "Area",
+            "reverse_description": "that includes"
+        }
+    }
+}
