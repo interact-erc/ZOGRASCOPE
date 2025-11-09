@@ -4,6 +4,8 @@ This is the official repository for the ZOGRASCOPE dataset, you can read the ass
 
 The Cypher graph associated to the dataset, where queries can be executed, is the Pole graph available at the official repo [here](https://github.com/neo4j-graph-examples/pole) (we also provide access [here](https://github.com/interact-erc/ZOGRASCOPE/tree/main/graph)).
 
+You can find the code used for the query generation [here](https://github.com/interact-erc/SPOT/tree/main).
+
 The data files, in csv format, contain the following fields: 
 - id: id of the sample
 - nl: natural language question
